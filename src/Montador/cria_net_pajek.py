@@ -9,7 +9,7 @@ Cria rede no formato .net para o sistema PAJEK e grupos, classificações, clust
 '''
 import psycopg2
 import sys
-from ../Coletor/Consultas/ConsultasAvancadas import gravalog
+from ConsultasAvancadas import gravalog
 
 f = None
 
@@ -21,7 +21,7 @@ def gravaArquivo(f, texto):
         print "Problemas ao gravar no arquivo"
         sys.exit()
 
-arquivo = '//home//raul//Documents//unb_python//data//rede_pajek.net'
+arquivo = '../../data/rede_pajek.net'
 f = open(arquivo,'w')
 
 conn_string = "host='193.169.1.8' dbname='portaltransparencia' user='postgres' password=senha'"
